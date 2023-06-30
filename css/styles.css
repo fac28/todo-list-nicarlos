@@ -1,0 +1,70 @@
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * Global...............Globally-available variables and config.
+ *
+ * BASE
+ * Headings.............H1–H6 styles.
+ * Paragraphs...........Paragraph styles.
+ *
+ * Universal
+ * Container Primitives...Wrapping and constraining elements.
+ * Font Primitives.......Generic font styles.
+ *
+ * COMPONENTS
+ * Page-head............The main page header.
+ * Page-foot............The main page footer.
+ * Buttons..............Button elements.
+ *
+ * Media queries
+ * Medium...............Media queries for medium screens
+ *
+ */
+
+
+
+/*------------------------------------*\
+  Settings
+\*------------------------------------*/
+
+  :root{
+    --header-font: 'Nunito', sans-serif;
+    --sub-font: 'PT Sans', sans-serif;
+
+    --light-grey: #E2E2DF;
+    --dark-grey: #D2D2CF;
+    --background-dark: #F7D9C4;
+    --background-light: #FAEDCB;
+    --blue: #C6DEF1;
+    --green: #C9E4DE;
+    --purple: #DBCDF0;
+    --pink: #F2C6DE;
+    --peach: #F9C6C9;
+
+
+  }
+
+
+
+/*------------------------------------*\
+  Base
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+  Universal
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+  Components
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+  Media queries
+\*------------------------------------*/
