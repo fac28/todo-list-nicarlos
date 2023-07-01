@@ -81,6 +81,20 @@ button {
   cursor: pointer;
 }
 
+/* Primitives */
+
+.margin-top-sm {
+  margin-top: .5rem;
+}
+
+.margin-top-md {
+  margin-top: 1rem;
+}
+
+.margin-top-lg {
+  margin-top: 2rem;
+}
+
 
 /*------------------------------------*\
   Components
@@ -91,7 +105,7 @@ button {
 header {
   background: var(--purple);
   width: 100%;
-  padding: 0 1.5rem;
+  padding: 0.5rem 1.5rem;
 }
 
 /* Form */
@@ -110,8 +124,8 @@ input {
   background: var(--blue);
   border-radius: 15px;
   border: none;
-  margin: 1rem 2rem;
-  width: 60vw;
+  margin: 1rem .5rem;
+  width: 65vw;
   max-width: 20rem;
   min-height: 3rem;
 }
@@ -119,11 +133,10 @@ input {
 input::placeholder {
   font-size: 1.25rem;
   font-family: var(--sub-font);
-  margin-left: 1rem;
  }
 
 #add-task-btn {
-  font-size: 4rem;
+  font-size: 3rem;
   color: var(--dark-grey);
 }
  
@@ -136,7 +149,6 @@ input::placeholder {
   width: 90vw;
   max-width: 30rem;
   border-radius: 30px;
-  margin-top: 2rem;
 }
 
 .kanban-container h2 {

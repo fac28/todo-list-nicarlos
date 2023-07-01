@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&family=PT+Sans&display=swap" rel="stylesheet">
   <title>Pastel-to-do</title>
-  <script defer src="testing/test-helpers.js"></script>
   <script defer src="js/script.js"></script>
+  <script defer src="testing/index.test.js" type="module"></script>
 </head>
 <body>
 
@@ -20,19 +20,19 @@
 
   <main>
     <form action="submit">
-      <div class="form-container">
+      <div class="form-container margin-top-lg">
         <input type="text" id="add-task-input" placeholder="Add new task...">
         <button type="submit" id="add-task-btn">&#43;</button>
       </div>
     </form>
 
-    <div class="kanban-container">
+    <div class="kanban-container margin-top-lg" id="backlog">
       <h2>Backlog:</h2>
     </div>
-    <div class="kanban-container">
+    <div class="kanban-container margin-top-lg">
       <h2>In progress:</h2>
     </div>
-    <div class="kanban-container">
+    <div class="kanban-container margin-top-lg">
       <h2>Complete:</h2>
     </div>
   </main>
