@@ -41,8 +41,6 @@
     --purple: #DBCDF0;
     --pink: #F2C6DE;
     --peach: #F9C6C9;
-
-
   }
 
 
@@ -51,19 +49,100 @@
   Base
 \*------------------------------------*/
 
+h1 {
+  font-family: var(--header-font);
+  font-size: 2rem;
+  font-weight: lighter;
+}
 
+h2 {
+  font-family: var(--header-font);
+  font-size: 1.5rem;
+  font-weight: lighter;
+}
+
+body {
+ background: var(--background-dark);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 /*------------------------------------*\
   Universal
 \*------------------------------------*/
 
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
 
 
 /*------------------------------------*\
   Components
 \*------------------------------------*/
 
+/* Header */
 
+header {
+  background: var(--purple);
+  width: 100%;
+  padding: 0 1.5rem;
+}
+
+/* Form */
+
+.form-container {
+  background: var(--background-light);
+  width: 90vw;
+  max-width: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+input {
+  background: var(--blue);
+  border-radius: 15px;
+  border: none;
+  margin: 1rem 2rem;
+  width: 60vw;
+  max-width: 20rem;
+  min-height: 3rem;
+}
+
+input::placeholder {
+  font-size: 1.25rem;
+  font-family: var(--sub-font);
+  margin-left: 1rem;
+ }
+
+#add-task-btn {
+  font-size: 4rem;
+  color: var(--dark-grey);
+}
+ 
+
+/* Kanban */
+
+.kanban-container {
+  background: var(--background-light);
+  min-height: 10rem;
+  width: 90vw;
+  max-width: 30rem;
+  border-radius: 30px;
+  margin-top: 2rem;
+}
+
+.kanban-container h2 {
+  margin-left: 2rem;
+  
+}
 
 /*------------------------------------*\
   Media queries
