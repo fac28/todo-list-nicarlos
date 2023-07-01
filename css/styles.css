@@ -156,6 +156,19 @@ input::placeholder {
   
 }
 
+.allContainers__list {
+  padding-left: 0;
+}
+.list__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  padding: .5rem 1rem;
+  background-color: var(--dark-grey);
+  border-radius: 10px;
+  margin: 1rem;
+}
 /*------------------------------------*\
   Media queries
 \*------------------------------------*/
