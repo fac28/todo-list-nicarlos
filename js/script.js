@@ -5,16 +5,15 @@ const backlogList = document.querySelector('.backlog__list');
 
 
 // *********** creates new list item with 'more' menu icon ************/
-const createNewListItem = (targetElement, newTextContent, newClassName) => {
-    const newListItem = document.createElement('li');
-    newListItem.className = newClassName;
-    newListItem.textContent = newTextContent;
-    targetElement.insertAdjacentElement('afterbegin', newListItem);
-    newListItem.insertAdjacentHTML('beforeend', 
-    `<span class="material-symbols-outlined tabindex="0">
-    more_horiz
-    </span>`);
-    return newListItem;
+const createNewListItem = (newTextContent) => {
+    
+    const backlogContainer = document.querySelector('#backlog');
+  
+    const itemTemplate = document.querySelector('#new-list-item');
+    const domFragment = itemTemplate.content.cloneNode(true);
+    domFragment.querySelector('p').textContent = newTextContent;
+  
+    backlogContainer.append(domFragment);
 }
 
 // ********** creates the dropdown 'more' menu ************/
@@ -47,8 +46,7 @@ const showHideMeatballMenu = () => {
 // ****************adds a new task to the backlog list*****************/
 form.addEventListener('submit', event => {
     event.preventDefault();
-    const newListItem = createNewListItem(backlogList, input.value, 'backlog__item list__item');
-    createMeatballMenu(newListItem);
+    const newListItem = createNewListItem(input.value);
     showHideMeatballMenu();
     form.reset();
 })
