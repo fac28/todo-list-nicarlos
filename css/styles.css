@@ -149,6 +149,7 @@ input::placeholder {
   width: 90vw;
   max-width: 30rem;
   border-radius: 30px;
+  position: relative;
 }
 
 .kanban-container h2 {
@@ -159,6 +160,7 @@ input::placeholder {
 .allContainers__list {
   padding-left: 0;
 }
+
 .list__item {
   display: flex;
   align-items: center;
@@ -167,7 +169,34 @@ input::placeholder {
   padding: .5rem 1rem;
   background-color: var(--dark-grey);
   border-radius: 10px;
-  margin: 1rem;
+  margin: 1rem 1rem 0 1rem;
+  font-family: var(--sub-font);
+}
+
+.meatball-menu {
+  background-color: #fffb;
+  margin: 0 1rem;
+  position: absolute;
+  width: 93%;  
+  list-style: none;
+  z-index: 1;
+  text-align: center;
+  display: none;
+}
+.show {
+  display: block;
+}
+
+.meatball-menu__list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.meatball-menu__item {
+  padding: 1rem 0;
+}
+.material-symbols-outlined:hover {
+  cursor: pointer;
 }
 /*------------------------------------*\
   Media queries
