@@ -167,6 +167,7 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 .list-content {
@@ -190,16 +191,14 @@ input::placeholder {
   justify-self: flex-end;
   justify-content: flex-start;
   width: fit-content;
-  position: relative;
+  position: absolute;
+  top: 100%;
   padding: .5rem 3rem;
   background: var(--purple);
   align-self: flex-end;
   margin-right: 8%;
   border-radius: 10px;
-}
-
-.dropdown-menu[aria-hidden = 'false'] {
-  display: flex;
+  z-index: 1;
 }
 
 .dropdown-menu button {
@@ -211,6 +210,7 @@ input::placeholder {
 
 .dropdown-btn {
   margin-right: 1rem;
+  font-size: 2rem;
 }
 
 .dropdown-btn img {
@@ -218,15 +218,13 @@ input::placeholder {
 }
 
 .show {
-  display: block;
+  display: flex;
 }
 
 .meatball-menu__item {
   padding: 1rem 0;
 }
-.material-symbols-outlined:hover {
-  cursor: pointer;
-}
+
 /*------------------------------------*\
   Media queries
 \*------------------------------------*/
