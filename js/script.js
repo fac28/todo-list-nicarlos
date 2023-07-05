@@ -1,6 +1,7 @@
 import { createNewListItem } from "./utils/createListItem.js";
 import { showHideMeatballMenu } from "./utils/showHideMeatball.js";
 import { moveItem } from "./utils/moveItem.js";
+import { deleteItem } from "./utils/deleteItem.js";
 
 /*------------------------------------*\
 DOM Access
@@ -40,6 +41,11 @@ backlogParent.addEventListener('click', (event) => {
         moveItem(target, 'complete')
 
     }
+
+    // Delete item
+    if (target.classList.contains('delete-btn')) {
+        deleteItem(target);
+    }
 })
 
 // ****************Progress listeners*****************/
@@ -65,6 +71,11 @@ progressParent.addEventListener('click', (event) => {
         moveItem(target, 'complete')
     }
 
+
+    // Delete item
+    if (target.classList.contains('delete-btn')) {
+        deleteItem(target);
+    }
 })
 
 // ****************Complete listeners*****************/
@@ -88,6 +99,11 @@ completeParent.addEventListener('click', (event) => {
 
     if (target.classList.contains('backlog-btn')) {
         moveItem(target, 'backlog')
+    }
+
+    // Delete item
+    if (target.classList.contains('delete-btn')) {
+        deleteItem(target);
     }
 })
 
