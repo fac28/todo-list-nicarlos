@@ -32,30 +32,30 @@
       <h2>Backlog:</h2>
     </div>
 
-    <div class="kanban-container margin-top-lg">
+    <div class="kanban-container margin-top-lg" id="progress">
       <h2>In progress:</h2>
     </div>
 
-    <div class="kanban-container margin-top-lg">
+    <div class="kanban-container margin-top-lg" id="complete">
       <h2>Complete:</h2>
     </div>
   </main>
 
   <template id="new-list-item">
-    <div class="list-item margin-top-md">
+    <div class="list-item margin-top-md" data-container="backlog">
       <div class="list-content">
         <p class="text-content"></p>
         <button class="dropdown-btn">&#8230;</button>
       </div>
       <div class="dropdown-menu" aria-expanded="false" aria-hidden="true">
         <h3>Move to:</h3>
-        <button>In progress</button>
-        <button>Complete</button>
-        <button>Delete</button>
+        <button class="backlog-btn">Backlog</button>
+        <button class="progress-btn">In progress</button>
+        <button class="complete-btn">Complete</button>
+        <button class="delet-btn">Delete</button>
       </div>
     </div>
   </template>
-
 
   
 </body>
