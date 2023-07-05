@@ -1,5 +1,7 @@
 import { createNewListItem } from "./utils/createListItem.js";
 import { showHideMeatballMenu } from "./utils/showHideMeatball.js";
+import { moveToProgress } from "./utils/moveToProgress.js";
+import { moveToBacklog } from "./utils/moveToBacklog.js";
 
 /*------------------------------------*\
 DOM Access
@@ -21,12 +23,15 @@ const progressParent = document.querySelector('#progress');
 backlogParent.addEventListener('click', (event) => {
     const target = event.target;
     
+    // Toggle meatball menu
+
     if (target.classList.contains('dropdown-btn')) {
         showHideMeatballMenu(target);
     }
+    // Move to in progress
 
     if (target.classList.contains('progress-btn')) {
-        moveToProgress(target);       
+        moveToProgress(target, 'backlog-btn', 'progress-btn', 'Backlog');       
     }
 })
 
@@ -40,7 +45,7 @@ progressParent.addEventListener('click', (event) => {
     }
 
     if (target.classList.contains('backlog-btn')) {
-        moveToBacklog(target);       
+        moveToBacklog(target, 'progress-btn', 'baclklog-btn', 'In progress');       
     }
 
 })
@@ -53,31 +58,6 @@ form.addEventListener('submit', event => {
     form.reset();
 })
 
-const moveToProgress = (target) => {
-    const prgressConainer = document.getElementById('progress');
-  
-    const elementToMove = target.parentNode.parentNode;
-  
-    prgressConainer.append(elementToMove);
-  
-    target.parentElement.classList.remove('show');
-    target.textContent = 'Backlog';
-    target.classList.add('backlog-btn');
-    target.classList.remove('progress-btn');
-  }
-
- const moveToBacklog = (target) => {
-    const backlogConainer = document.getElementById('backlog');
-  
-    const elementToMove = target.parentNode.parentNode;
-  
-    backlogConainer.append(elementToMove);
-  
-    target.parentElement.classList.remove('show');
-    target.textContent = 'In Progress';
-    target.classList.add('progress-btn');
-    target.classList.remove('backlog-btn');
- }
 
 
 
