@@ -1,3 +1,5 @@
+import { showHideButton } from "./ShowHideButton.js";
+
 /* Function to move list item to progress container */
 
 
@@ -9,4 +11,6 @@ export const moveItem = (target, destinationID) => {
   targetConainer.append(elementToMove);
 
   target.parentElement.classList.remove('show');
+
+  showHideButton(target, destinationID);
 }

@@ -71,6 +71,12 @@ main {
   align-items: center;
 }
 
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 /*------------------------------------*\
   Universal
 \*------------------------------------*/
@@ -128,11 +134,14 @@ input {
   width: 65vw;
   max-width: 20rem;
   min-height: 3rem;
+  padding-left: 1rem;
+
 }
 
 input::placeholder {
   font-size: 1.25rem;
   font-family: var(--sub-font);
+
  }
 
 #add-task-btn {
@@ -147,7 +156,8 @@ input::placeholder {
   background: var(--background-light);
   min-height: 10rem;
   width: 90vw;
-  max-width: 30rem;
+  max-width: 40rem;
+  margin: 1.5rem 1.5rem;
   border-radius: 30px;
   position: relative;
   display: flex;
@@ -218,6 +228,14 @@ input::placeholder {
 
 .show {
   display: flex;
+}
+
+.btn-show {
+  display: block;
+}
+
+.btn-no-show {
+  display: none;
 }
 
 .meatball-menu__item {
