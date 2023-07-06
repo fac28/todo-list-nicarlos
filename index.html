@@ -27,29 +27,30 @@
         <button type="submit" id="add-task-btn">&#43;</button>
       </div>
     </form>
-
-    <div class="kanban-container margin-top-lg" id="backlog">
-      <h2>Backlog:</h2>
-    </div>
-
-    <div class="kanban-container margin-top-lg" id="progress">
-      <h2>In progress:</h2>
-    </div>
-
-    <div class="kanban-container margin-top-lg" id="complete">
-      <h2>Complete:</h2>
+    <div class="wrapper margin-top-lg">
+      <div class="kanban-container" id="backlog">
+        <h2>Backlog:</h2>
+      </div>
+  
+      <div class="kanban-container" id="progress">
+        <h2>In progress:</h2>
+      </div>
+  
+      <div class="kanban-container" id="complete">
+        <h2>Complete:</h2>
+      </div>
     </div>
   </main>
 
   <template id="new-list-item">
-    <div class="list-item margin-top-md" data-container="backlog">
+    <div class="list-item margin-top-md">
       <div class="list-content">
         <p class="text-content"></p>
         <button class="dropdown-btn">&#8230;</button>
       </div>
       <div class="dropdown-menu" aria-expanded="false" aria-hidden="true">
         <h3>Move to:</h3>
-        <button class="backlog-btn">Backlog</button>
+        <button class="backlog-btn btn-no-show">Backlog</button>
         <button class="progress-btn">In progress</button>
         <button class="complete-btn">Complete</button>
         <button class="delete-btn">Delete</button>
@@ -57,6 +58,5 @@
     </div>
   </template>
 
-  
 </body>
 </html>
