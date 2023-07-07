@@ -1,4 +1,5 @@
 import { showHideButton } from "./ShowHideButton.js";
+import { changeItemColour } from "./changeItemColour.js";
 
 /* Function to move list item to progress container */
 
@@ -6,11 +7,12 @@ import { showHideButton } from "./ShowHideButton.js";
 export const moveItem = (target, destinationID) => {
   const targetConainer = document.getElementById(destinationID);
 
-  const elementToMove = target.parentNode.parentNode;
+  const elementToMove = target.closest('.list-item');
 
   targetConainer.append(elementToMove);
 
   target.parentElement.classList.remove('show');
 
+  changeItemColour(target, destinationID);
   showHideButton(target, destinationID);
 }
