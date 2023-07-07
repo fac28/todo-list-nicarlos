@@ -15,7 +15,6 @@ function onDrop(event) {
   
   const draggableElement = document.getElementById(id);
   const dropzone = event.target;
-  console.log(dropzone.id);
 
   dropzone.appendChild(draggableElement);
   changeItemColour(draggableElement, dropzone.id);
@@ -23,7 +22,7 @@ function onDrop(event) {
 
 }
 
-
+// Change Colour for drag and drop
 
 const changeItemColour = (target, destinationID) => {
   
@@ -44,8 +43,10 @@ const changeItemColour = (target, destinationID) => {
 
 }
 
+// Update buttons for drag and drop
+
 const showHideButton = (target, destinationID) => {
-  const buttonContainer = target.parentNode;
+  const buttonContainer = target;
   const backlogBtn = buttonContainer.querySelector('.backlog-btn');
   const progressBtn = buttonContainer.querySelector('.progress-btn');
   const completeBtn = buttonContainer.querySelector('.complete-btn');
