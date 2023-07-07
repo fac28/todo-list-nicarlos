@@ -21,7 +21,7 @@ export const showHideButton = (target, destinationID) => {
       progressBtn.classList.add('btn-no-show');   
   
     } else {
-      progressBtnBtn.classList.add('btn-show');
+      progressBtn.classList.add('btn-show');
       progressBtn.classList.remove('btn-no-show');  
 
     }
