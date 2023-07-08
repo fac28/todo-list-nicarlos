@@ -11,8 +11,7 @@
   <title>Pastel-to-do</title>
   <script defer src="js/script.js" type="module"></script>
   <script defer src="testing/index.test.js" type="module"></script>
-  <!-- icons  -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script defer src="js/dragAndDrop.js"></script>
 </head>
 <body>
 
@@ -28,22 +27,40 @@
       </div>
     </form>
     <div class="wrapper margin-top-lg">
-      <div class="kanban-container" id="backlog">
+      <div 
+        class="kanban-container"  
+        id="backlog"
+        ondragover="onDragOver(event)"
+        ondrop="onDrop(event)"
+        >
         <h2>Backlog:</h2>
       </div>
   
-      <div class="kanban-container" id="progress">
+      <div 
+        class="kanban-container" 
+        id="progress"
+        ondragover="onDragOver(event)"
+        ondrop="onDrop(event)"
+        >
         <h2>In progress:</h2>
       </div>
   
-      <div class="kanban-container" id="complete">
+      <div 
+        class="kanban-container" 
+        id="complete"
+        ondragover="onDragOver(event)"
+        ondrop="onDrop(event)"
+        >
         <h2>Complete:</h2>
       </div>
     </div>
   </main>
 
   <template id="new-list-item">
-    <div class="list-item margin-top-md">
+    <div 
+      class="list-item margin-top-md"
+      draggable="true"
+      ondragstart="onDragStart(event)">
       <div class="list-content">
         <p class="text-content"></p>
         <button class="dropdown-btn">&#8230;</button>
