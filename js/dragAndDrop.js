@@ -3,7 +3,8 @@
 \*------------------------------------*/
 
 function onDragStart(event) {
-  event.dataTransfer.setData('text/plain', event.target.id);
+  const id = event.target.id;
+  event.dataTransfer.setData('text/plain', id);
 }
 
 function onDragOver(event) {
@@ -28,7 +29,7 @@ const changeItemColour = (target, destinationID) => {
   
   const listContent = target.querySelector('.list-content');
 
-  if (destinationID === 'background') {
+  if (destinationID === 'backlog') {
     listContent.style.background = 'var(--blue)';
   }
 
@@ -79,3 +80,38 @@ const showHideButton = (target, destinationID) => {
       completeBtn.classList.remove('btn-no-show');   
     }
 }
+
+/*------------------------------------*\
+  Event Listeners
+\*------------------------------------*/
+
+// const containers = document.querySelectorAll('.kanban-container');
+
+// containers.forEach((el) => {
+//   el.addEventListener('dragover', onDragOver);
+//   el.addEventListener('drop', onDrop);
+// })
+
+
+
+
+const dragAndDropTest = () => {
+
+  const input = document.querySelector('#add-task-input');
+  const addTaskBtn = document.querySelector('#add-task-btn');
+
+  input.value = 'Get a glass of water';
+  addTaskBtn.click();
+
+  const dragElement = document.querySelector('.list-item');
+  console.log(dragElement);
+  const dropElement = document.querySelector('#progress');
+
+  const dragStartEvent = new Event('dragstart');
+  const dropEvent = new Event('drop');
+
+  dragElement.dispatchEvent(dragStartEvent);
+  
+  dropElement.dispatchEvent(dropEvent)
+}
+

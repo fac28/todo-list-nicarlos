@@ -4,7 +4,7 @@ export const changeItemColour = (target, destinationID) => {
   const listItem = target.closest('.list-item');
   const listContent = listItem.querySelector('.list-content');
 
-  if (destinationID === 'background') {
+  if (destinationID === 'backlog') {
     listContent.style.background = 'var(--blue)';
   }
 
