@@ -130,9 +130,9 @@ input {
   background: var(--blue);
   border-radius: 15px;
   border: none;
-  margin: 1rem .5rem;
+  margin: .75rem .5rem;
   width: 65vw;
-  max-width: 20rem;
+  max-width: 23rem;
   min-height: 3rem;
   padding-left: 1rem;
 

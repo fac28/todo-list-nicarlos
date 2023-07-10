@@ -9,7 +9,6 @@ DOM Access
 
 const input = document.querySelector('#add-task-input');
 const form = document.querySelector('form');
-const addTaskBtn = document.querySelector('#add-task-btn');
 const backlogParent = document.querySelector('#backlog');
 const progressParent = document.querySelector('#progress');
 const completeParent = document.querySelector('#complete');
